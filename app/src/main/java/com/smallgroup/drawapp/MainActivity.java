@@ -15,19 +15,178 @@ import android.widget.Toast;
 
 import java.util.UUID;
 
+import co.mobiwise.materialintro.animation.MaterialIntroListener;
+import co.mobiwise.materialintro.shape.Focus;
+import co.mobiwise.materialintro.shape.FocusGravity;
+import co.mobiwise.materialintro.shape.ShapeType;
+import co.mobiwise.materialintro.view.MaterialIntroView;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private DrawingView drawView;
     private ImageButton currPaint;
     private ImageView drawBtn, eraseBtn, newBtn, saveBtn;
-
+    private LinearLayout allColors;
     private float smallBrush, mediumBrush, largeBrush;
 
 
+    @SuppressLint("UseCompatLoadingForDrawables")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+        saveBtn = findViewById(R.id.save_btn);
+        eraseBtn = findViewById(R.id.erase_btn);
+        drawView = findViewById(R.id.drawing);
+        allColors = findViewById(R.id.all_colors);
+        drawBtn = findViewById(R.id.brush_btn);
+        newBtn = findViewById(R.id.new_btn);
+
+
+        new MaterialIntroView.Builder(this)
+                .enableDotAnimation(true)
+                .enableIcon(false)
+                .setFocusGravity(FocusGravity.CENTER)
+                .setFocusType(Focus.MINIMUM)
+                .setDelayMillis(400)
+                .enableFadeAnimation(true)
+                .performClick(true)
+                .setInfoText("Привет! Это твоя рабочая область. Давай посмотрим чем ты можешь воспользоваться. ")
+                .setShape(ShapeType.RECTANGLE)
+                .setTarget(saveBtn)
+                .setUsageId("intro_card")
+                .setMaskColor(getResources().getColor(R.color.green50))//THIS SHOULD BE UNIQUE ID
+                .setListener(new MaterialIntroListener() {
+                    @Override
+                    public void onUserClicked(String materialIntroViewId) {
+
+                        Toast.makeText(MainActivity.this, "start ART !",Toast.LENGTH_SHORT).show();
+                    }
+                })
+
+                .show();
+
+
+        new MaterialIntroView.Builder(this)
+                .enableDotAnimation(true)
+                .enableIcon(false)
+                .setFocusGravity(FocusGravity.CENTER)
+                .setFocusType(Focus.MINIMUM)
+                .setDelayMillis(400)
+                .enableFadeAnimation(true)
+                .performClick(true)
+                .setInfoText("Привет! Это твоя рабочая область. Давай посмотрим чем ты можешь воспользоваться. ")
+                .setShape(ShapeType.RECTANGLE)
+                .setTarget(eraseBtn)
+                .setUsageId("intro_card")
+                .setMaskColor(getResources().getColor(R.color.green50))//THIS SHOULD BE UNIQUE ID
+                .setListener(new MaterialIntroListener() {
+                    @Override
+                    public void onUserClicked(String materialIntroViewId) {
+
+                        Toast.makeText(MainActivity.this, "start ART !",Toast.LENGTH_SHORT).show();
+                    }
+                })
+
+                .show();
+
+        new MaterialIntroView.Builder(this)
+                .enableDotAnimation(true)
+                .enableIcon(false)
+                .setFocusGravity(FocusGravity.CENTER)
+                .setFocusType(Focus.MINIMUM)
+                .setDelayMillis(400)
+                .enableFadeAnimation(true)
+                .performClick(true)
+                .setInfoText("Привет! Это твоя рабочая область. Давай посмотрим чем ты сможешь воспользоваться, когда будешь рисовать на ней.")
+                .setShape(ShapeType.RECTANGLE)
+                .setTarget(drawView)
+                .setUsageId("intro_card")
+                .setMaskColor(getResources().getColor(R.color.green50))//THIS SHOULD BE UNIQUE ID
+                .setListener(new MaterialIntroListener() {
+                    @Override
+                    public void onUserClicked(String materialIntroViewId) {
+
+                        Toast.makeText(MainActivity.this, "start ART !",Toast.LENGTH_SHORT).show();
+                    }
+                })
+                .show();
+
+
+        new MaterialIntroView.Builder(this)
+                .enableDotAnimation(true)
+                .enableIcon(false)
+                .setFocusGravity(FocusGravity.CENTER)
+                .setFocusType(Focus.MINIMUM)
+                .setDelayMillis(400)
+                .enableFadeAnimation(true)
+                .performClick(true)
+                .setInfoText("Привет! Это твоя рабочая область. Давай посмотрим чем ты можешь воспользоваться. ")
+                .setShape(ShapeType.RECTANGLE)
+                .setTarget(allColors)
+                .setUsageId("intro_card")
+                .setMaskColor(getResources().getColor(R.color.green50))//THIS SHOULD BE UNIQUE ID
+                .setListener(new MaterialIntroListener() {
+                    @Override
+                    public void onUserClicked(String materialIntroViewId) {Toast.makeText(MainActivity.this, "start ART !",Toast.LENGTH_SHORT).show();
+                    }
+                })
+
+                .show();
+
+
+        new MaterialIntroView.Builder(this)
+                .enableDotAnimation(true)
+                .enableIcon(false)
+                .setFocusGravity(FocusGravity.CENTER)
+                .setFocusType(Focus.MINIMUM)
+                .setDelayMillis(400)
+                .enableFadeAnimation(true)
+                .performClick(true)
+                .setInfoText("Привет! Это твоя рабочая область. Давай посмотрим чем ты можешь воспользоваться. ")
+                .setShape(ShapeType.RECTANGLE)
+                .setTarget(drawBtn)
+                .setUsageId("intro_card")
+                .setMaskColor(getResources().getColor(R.color.green50))//THIS SHOULD BE UNIQUE ID
+                .setListener(new MaterialIntroListener() {
+                    @Override
+                    public void onUserClicked(String materialIntroViewId) {
+
+                        Toast.makeText(MainActivity.this, "start ART !",Toast.LENGTH_SHORT).show();
+                    }
+                })
+
+                .show();
+
+
+        new MaterialIntroView.Builder(this)
+                .enableDotAnimation(true)
+                .enableIcon(false)
+                .setFocusGravity(FocusGravity.CENTER)
+                .setFocusType(Focus.MINIMUM)
+                .setDelayMillis(400)
+                .enableFadeAnimation(true)
+                .performClick(true)
+                .setInfoText("Привет! Это твоя рабочая область. Давай посмотрим чем ты можешь воспользоваться. ")
+                .setShape(ShapeType.RECTANGLE)
+                .setTarget(newBtn)
+                .setUsageId("intro_card")
+                .setMaskColor(getResources().getColor(R.color.green50))//THIS SHOULD BE UNIQUE ID
+                .setListener(new MaterialIntroListener() {
+                    @Override
+                    public void onUserClicked(String materialIntroViewId) {
+
+                        Toast.makeText(MainActivity.this, "start ART !",Toast.LENGTH_SHORT).show();
+                    }
+                })
+
+                .show();
+
+
+
+
         drawView = (DrawingView)findViewById(R.id.drawing);
 
         LinearLayout paintLayout = (LinearLayout)findViewById(R.id.paint_colors);

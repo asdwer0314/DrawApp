@@ -7,12 +7,12 @@
         <deviceKey>
           <Key>
             <type value="VIRTUAL_DEVICE_PATH" />
-            <value value="C:\Users\Polina\.android\avd\Nexus_5X_API_27.avd" />
+            <value value="C:\Users\Polina\.android\avd\Galaxy_Nexus_API_30.avd" />
           </Key>
         </deviceKey>
       </Target>
     </targetSelectedWithDropDown>
-    <timeTargetWasSelectedWithDropDown value="2022-02-15T19:07:28.846285800Z" />
+    <timeTargetWasSelectedWithDropDown value="2022-02-22T10:36:57.605877300Z" />
     <targetsSelectedWithDialog>
       <Target>
         <type value="QUICK_BOOT_TARGET" />
